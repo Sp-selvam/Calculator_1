@@ -1,0 +1,100 @@
+*{
+    text-align:center;
+}
+
+#container{
+    width: 350px;
+    height: 500px;
+    background: #062f6d;
+    border: 1px solid rgb(250, 250, 250, 0.3);
+    margin: 40px auto;
+    display: flex;
+    flex-wrap:wrap;
+    box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+    /*box-shadow: -5px -5px 18px 1px rgb(102, 213, 250, 0.7), 5px 5px 18px 1px rgb(252, 252, 1, 0.7);*/
+    /*box-shadow: 5px 8px 10px  #17bbd8, -5px -8px 10px #d6c316;*/
+}
+
+button{ 
+    width: 68px;
+    height: 68px;
+    color: white;
+    font-size:x-large;
+    background: #1f61b3;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 25%;
+}
+:is(button, #container).symbols{
+    background-color: #6dc0f0;
+    color: rgb(2, 3, 77);
+}
+:is(button, #container).symbols:hover{
+    background-color: #fcec60;
+}
+
+button:hover {
+    background-color: #6fd8eb;
+    color: rgb(2, 3, 77);
+  }
+button:active {
+    box-shadow: inset 1px 1px 5px rgba(94, 31, 31, 0.7),
+                inset -1px -1px 2px rgba(255, 255, 255, 0.3);
+    color: #642929;
+  }
+  
+
+#calculation{
+    width: 100%;
+    height: 18%;
+    background: #0a55a5;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 25px 45px -20px inset, rgba(0, 0, 0, 0.3) 0px 20px 32px -25px inset;
+    overflow: auto;
+}
+#calculation pre{
+    text-align: right;
+    font-size: 25px;
+    padding-right: 15px;
+    padding-top: 8px;
+    margin: 0;
+    word-break: break-all; /* It helps the text not to overflow from the div*/ 
+    white-space: pre-wrap; /* It helps the text not to overflow from the div*/
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+div #upper {
+    color: #5adef0;
+    font-size: 20px;
+  }
+
+@media screen and (max-width:500px){
+    body{
+        margin: 0%;
+    }
+    #container{
+        width: 100vw;
+        min-width: 340px;
+        height: 100vh;
+        margin: 0%;
+    }
+    button{ 
+        width: 23vw;
+        min-width: 73px;
+        height: 23vw;
+        min-height: 73px;
+        font-size:2rem;
+        font-weight: 700;
+        margin: 0 3px;
+    }
+    #calculation{
+        width: 100%;
+        height:33%;
+    }
+    #calculation pre{
+        font-size: 3rem;
+        padding-right: 15px;
+        padding-top: 15px;
+    }
+}
